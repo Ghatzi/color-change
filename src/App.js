@@ -1,9 +1,16 @@
-function App() {
+import { useState } from 'react';
+import ColorBox from './ColorBox';
+import InputValue from './InputValue';
+
+const App = () => {
+  const [color, setColor] = useState('');
+
   return (
     <div className="App">
-      <header className="App-header">working</header>
+      <ColorBox color={color} />
+      <InputValue color={color} setColor={setColor} />
     </div>
   );
-}
+};
 
 export default App;
